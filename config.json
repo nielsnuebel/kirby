@@ -12,6 +12,7 @@
     "cssimg": "dist/assets/images/",
     "bitmaps": "dist/assets/images/bitmaps/",
     "vectors": "dist/assets/images/svgfiles/",
+    "content": "dist/content/",
     "contentimage": "dist/content/",
     "webpackjsassets": "assets/",
     "webpackpublic": "dist/"
@@ -141,6 +142,7 @@
     "js": "src/js/",
     "scripts": "src/scripts",
     "structure": "src/structure/",
+    "content": "src/content/",
     "fonts": "src/fonts/",
     "images": {
       "bitmapSprite": {

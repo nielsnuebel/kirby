@@ -21,7 +21,8 @@ const buildTask = (cb) => {
       'copy:fonts',
       'rebuild:js',
       'rebuild:images',
-      'copy:contentimages'
+      'copy:contentimages',
+      'copy:kirbycontent'
     ],
     [
       'compiler:css',

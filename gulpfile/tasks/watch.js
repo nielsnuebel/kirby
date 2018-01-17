@@ -7,6 +7,7 @@ import kc from '../../config.json'
 import gulp from 'gulp'
 import watch from 'gulp-watch'
 import templateFiles from '../lib/templateFiles'
+import contentFiles from '../lib/contentFiles'
 import path from 'path'
 
 const watchTask = () => {
@@ -15,6 +16,7 @@ const watchTask = () => {
 
   // Watch the Structure
   gulp.watch([templateFiles()], ['compiler:html'])
+  gulp.watch([contentFiles()], ['copy:kirbycontent'])
 }
 
 gulp.task('watch', watchTask)
