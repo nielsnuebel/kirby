@@ -78,7 +78,9 @@ const browserSyncTask = () => {
       files: [
         kc.dist.js + '**/*.js',
         kc.dist.css + '**/*.css',
-        kc.dist.markup + 'templates/**/*.{php,html,twig}',
+        kc.dist.dist + 'content/**/*.{txt}',
+        kc.dist.markup + 'templates/**/*.{php}',
+        kc.dist.markup + 'snippets/**/*.{php}',
         kc.dist.cssimg + '**/*.{jpg,gif,png,svg}'
       ]
     }

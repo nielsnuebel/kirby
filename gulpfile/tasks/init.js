@@ -16,8 +16,7 @@ const initTask = (cb) => {
       'copy:fonts',
       'rebuild:js',
       'rebuild:images',
-      'copy:contentimages',
-      'copy:kirbyplugins'
+      'copy:contentimages'
     ],
     [
       'compiler:css',

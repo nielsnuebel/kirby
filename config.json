@@ -2,9 +2,8 @@
   "dist": {
     "cssimgRoot": "/assets/img/",
     "dist": "dist/",
-    "base": "dist/public/",
-    "markup": "dist/craft/", // compile-html und browsersync
-    "templates": "dist/site/templates",
+    "base": "dist/",
+    "markup": "dist/site/",
     "assets": "dist/assets/",
     "browserSyncDir": "dist/",
     "css": "dist/assets/css/",
@@ -13,9 +12,9 @@
     "cssimg": "dist/assets/images/",
     "bitmaps": "dist/assets/images/bitmaps/",
     "vectors": "dist/assets/images/svgfiles/",
-    "contentimage": "dist/public/images/",
+    "contentimage": "dist/content/",
     "webpackjsassets": "assets/",
-    "webpackpublic": "dist/public/"
+    "webpackpublic": "dist/"
   },
   "templatePath": {
     "root": "./",
@@ -28,10 +27,6 @@
   "css": {
     "spacer": "20px",
     "baseFontSize": "16px"
-  },
-  "template": {
-    "globalTitle": "nielsnuebel",
-    "compiler": false
   },
   "browsersync": {
     "openbrowser": true,

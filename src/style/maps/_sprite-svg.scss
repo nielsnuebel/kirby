@@ -4,7 +4,7 @@
 /* stylelint-disable */
 
 $svgspritebase: (
-  width: 120px,
+  width: 150px,
   height: 120px
 );
 
@@ -18,8 +18,8 @@ $svgsprites: (
   icon-close: (
     width: 30px,
     height: 30px,
-    posX: -30px,
-    posY: -60px
+    posX: -90px,
+    posY: 0px
   ),
   icon-email: (
     width: 30px,
@@ -51,6 +51,12 @@ $svgsprites: (
     posX: 0px,
     posY: -60px
   ),
+  icon-logo: (
+    width: 30px,
+    height: 21.78px,
+    posX: -30px,
+    posY: -60px
+  ),
   icon-pinterest: (
     width: 30px,
     height: 30px,
@@ -60,43 +66,43 @@ $svgsprites: (
   icon-reddit: (
     width: 30px,
     height: 30px,
-    posX: -60px,
-    posY: -60px
+    posX: -90px,
+    posY: -30px
   ),
   icon-search: (
     width: 30px,
     height: 30px,
     posX: -90px,
-    posY: 0px
-  ),
-  icon-twitter: (
-    width: 30px,
-    height: 30px,
-    posX: -90px,
-    posY: -30px
-  ),
-  icon-vimeo: (
-    width: 30px,
-    height: 30px,
-    posX: -90px,
     posY: -60px
   ),
-  icon-whatsapp: (
+  icon-twitter: (
     width: 30px,
     height: 30px,
     posX: 0px,
     posY: -90px
   ),
-  icon-xing: (
+  icon-vimeo: (
     width: 30px,
     height: 30px,
     posX: -30px,
     posY: -90px
   ),
-  icon-youtube: (
+  icon-whatsapp: (
     width: 30px,
     height: 30px,
     posX: -60px,
     posY: -90px
+  ),
+  icon-xing: (
+    width: 30px,
+    height: 30px,
+    posX: -90px,
+    posY: -90px
+  ),
+  icon-youtube: (
+    width: 30px,
+    height: 30px,
+    posX: -120px,
+    posY: 0px
   ),
 );

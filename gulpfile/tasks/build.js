@@ -21,7 +21,6 @@ const buildTask = (cb) => {
       'copy:fonts',
       'rebuild:js',
       'rebuild:images',
-      'copy:craftplugins',
       'copy:contentimages'
     ],
     [
