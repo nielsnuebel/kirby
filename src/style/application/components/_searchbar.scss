@@ -1,0 +1,133 @@
+/*
+  Searchbar
+  =========
+  Searchfield for the Topbar
+*/
+.c-searchbar {
+  // Component Config
+  $api: (
+    breakpoint: glob(header, breaksizes, one),
+    height: 100vh,
+    background: c('primary'),
+    icon: (
+      color: c('black'),
+      hover: c('primary'),
+      width: 24px
+    ),
+    input: (
+      height: 60px,
+      padding: s(.5),
+      color: c('white'),
+      font-size: rem(45)
+    )
+  );
+
+  // Build Root and Rootname
+  $root: #{&};
+  $rn: str_slice($root,4);  // Rootname only
+
+  // API Grabber
+  @function api($keys...) {
+    @return map-deep-get($api, $keys...);
+  }
+
+  // Base Style ----------------------------
+  position: fixed;
+  width: calc(100%);
+  height: api(height);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 32;
+  opacity: 0;
+  visibility: hidden;
+  background-color: api(background);
+  transform: scale(1.1);
+  transition: .3s;
+  pointer-events: none;
+
+  &.is-open {
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  @include break(api(breakpoint)) {
+    display: block;
+  }
+
+  // Tags ----------------------------------
+
+  // Base Modifier -------------------------
+
+  // Childs --------------------------------
+
+  // [root]__trigger
+  &__trigger {
+    @include scale(50 50, false, w api(icon,width));
+    position: relative;
+    cursor: pointer;
+    top: 2px;
+
+    svg {
+      fill: api(icon,color);
+      transition: fill 300ms ease-in-out;
+    }
+
+    &.is-open,
+    &:hover {
+      svg {
+        fill: api(icon,hover);
+      }
+    }
+  }
+
+  // [root]__input
+  &__input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    width: 60%;
+    transform: translateY(-50%);
+    color: api(input,color);
+    background-color: rgba(0,0,0,0);
+    border-radius: 0;
+    border: 0;
+    border-bottom: 4px solid c('white');
+    height: api(input,height);
+    line-height: normal;
+    padding-left: api(input,padding);
+    padding-right: api(input,padding);
+    font-size: api(input,font-size);
+    transition: border-color 300ms ease-in-out;
+    text-align: center;
+    padding-bottom: s(1);
+
+    @include placeholder {
+      color: c('white');
+    }
+
+    &:focus {
+      border-color: c('white');
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 39px;
+    top: 41px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: c('white');
+  }
+
+  // [root]__submit
+  &__submit {
+    display: none;
+  }
+}

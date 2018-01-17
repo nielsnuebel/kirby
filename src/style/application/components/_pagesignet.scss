@@ -1,0 +1,61 @@
+/*
+  Pagelogo
+  ========
+  Simple Page Logo
+*/
+.c-pagesignet {
+  $api: (
+    breakpoint: 'm',
+    margin-bottom: s(.5)
+  );
+
+  // ::::::::: ROOT SELECTOR
+  $root: #{&};
+
+  // ::::::::: API GRABBER
+  @function api($keys...) {
+    @return map-deep-get($api, $keys...);
+  }
+
+  // ::::::::: BASE
+  width: 82px;
+  height: 43px;
+  position: absolute;
+  top: s(1);
+  left: s(2);
+
+  /* stylelint-disable */
+  svg {
+    width: 82px;
+  }
+  /* stylelint-enable */
+
+  &, a {
+    @include fontsize(50);
+    color: c('black-30');
+    line-height: 1;
+    font-weight: 700; /* stylelint-disable */
+    text-transform: uppercase;
+  }
+
+  small {
+    display: block;
+    font-weight: 400;
+    @include fontsize(30);
+  }
+
+  a {
+    transition: all 300ms ease-in;
+
+    &:hover {
+      color: c('primary');
+    }
+  }
+
+  &__path {
+    fill: c('primary')
+  }
+  // ::::::::: TAGS
+  // ::::::::: MODIFIER
+  // ::::::::: CHILDS
+}

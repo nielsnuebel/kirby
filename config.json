@@ -1,0 +1,207 @@
+{
+  "dist": {
+    "cssimgRoot": "/assets/img/",
+    "dist": "dist/",
+    "base": "dist/public/",
+    "markup": "dist/craft/", // compile-html und browsersync
+    "templates": "dist/site/templates",
+    "assets": "dist/assets/",
+    "browserSyncDir": "dist/",
+    "css": "dist/assets/css/",
+    "js": "dist/assets/js/",
+    "fonts": "dist/assets/fonts/",
+    "cssimg": "dist/assets/images/",
+    "bitmaps": "dist/assets/images/bitmaps/",
+    "vectors": "dist/assets/images/svgfiles/",
+    "contentimage": "dist/public/images/",
+    "webpackjsassets": "assets/",
+    "webpackpublic": "dist/public/"
+  },
+  "templatePath": {
+    "root": "./",
+    "css": "assets/css/",
+    "js": "assets/js/",
+    "fonts": "assets/fonts/",
+    "cssimage": "assets/img/",
+    "contentimage": "images/"
+  },
+  "css": {
+    "spacer": "20px",
+    "baseFontSize": "16px"
+  },
+  "template": {
+    "globalTitle": "nielsnuebel",
+    "compiler": false
+  },
+  "browsersync": {
+    "openbrowser": true,
+    "https": false,
+    "proxy": "http://kirby.test"
+  },
+  "files": {
+    "jsCopy": [
+      "node_modules/lazysizes/plugins/respimg/ls.respimg.js"
+    ],
+    "jsCombine": {
+      "files": [],
+      "filename": "scripts.js"
+    },
+    "fonts": [
+      "src/fonts/**"
+    ],
+    "launch": [
+      {
+        "src": "favicons/**",
+        "dest": "assets/images/system/"
+      },
+      {
+        "src": "facebook-og-image.jpg",
+        "dest": "assets/images/system/"
+      },
+      {
+        "src": "twitter-og-image.jpg",
+        "dest": "assets/images/system/"
+      }
+    ]
+  },
+  "modernizr": {
+    "options": [
+      "setClasses",
+      "addTest",
+      "testAllProps",
+      "fnBind"
+    ],
+    "tests": [
+      "flexbox",
+      "touch",
+      "inlinesvg",
+      "webgl",
+      "picture"
+    ]
+  },
+  "minify": {
+    "images": {
+      "optimizationLevel": 3,
+      "pngquant": {
+        "quality": "75-88",
+        "speed": 4
+      },
+      "svgoPlugins": [
+        {
+          "cleanupIDs": false
+        },
+        {
+          "removeComments": true
+        },
+        {
+          "removeViewBox": false
+        },
+        {
+          "removeDesc": true
+        },
+        {
+          "removeUselessDefs": false
+        },
+        {
+          "removeDoctype": true
+        },
+        {
+          "removeEmptyText": true
+        },
+        {
+          "removeUnknownsAndDefaults": true
+        },
+        {
+          "removeEmptyContainers": true
+        },
+        {
+          "collapseGroups": true
+        },
+        {
+          "removeUselessStrokeAndFill": true
+        },
+        {
+          "convertStyleToAttrs": true
+        }
+      ],
+      "progressive": true,
+      "interlaced": true
+    },
+    "javascript": {
+      "options": {
+        "mangle": false
+      }
+    }
+  },
+  "src": {
+    "baseconf": {
+      "type": "craftCB",
+      "methodology": "sassITCSS",
+      "structure": "uncompiled",
+      "themeColor": "#29b8f2"
+    },
+    "base": "src/",
+    "style": "src/style/",
+    "template": "src/template/",
+    "js": "src/js/",
+    "scripts": "src/scripts",
+    "structure": "src/structure/",
+    "fonts": "src/fonts/",
+    "images": {
+      "bitmapSprite": {
+        "files": "src/images/bitmapSprite-assets/",
+        "name": "sprite.png"
+      },
+      "vectorSprite": {
+        "files": "src/images/vectorSprite-assets/",
+        "name": "vector-sprite.svg",
+        "symbolName": "symbol-sprite.svg",
+        "maxHeight": 30,
+        "maxWidth": 30,
+        "padding": 0
+      },
+      "bitmaps": "src/images/bitmapSingle-assets/",
+      "vectors": "src/images/vectorSingle-assets/"
+    },
+    "contentimage": "src/images/htmlimages/",
+    "system": "src/.system/",
+    "jsEntryPoints": {
+      "main": "../src/js/main.js"
+    },
+    "plugins": "src/craftplugins/",
+    "templates": "src/structure/templates/"
+  },
+  "cssabove": {
+    "width": "1200",
+    "height": "1024",
+    "minify": true,
+    "inline": false,
+    "url": "http://kirby.test",
+    "cssfile": "style.css",
+    "include": [
+      ".plj",
+      ".c-progressLoader"
+    ],
+    "ignore": [
+      "font-face"
+    ],
+    "sites": [
+      {
+        "url": "",
+        "template": "index"
+      },
+      {
+        "url": "/blog/hello-world",
+        "template": "general/entry"
+      },
+      {
+        "url": "/blog",
+        "template": "general/index"
+      },
+      {
+        "url": "/404",
+        "template": "404"
+      }
+    ]
+  }
+}
