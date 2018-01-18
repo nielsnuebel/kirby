@@ -50,7 +50,8 @@ the project further:
 git clone https://github.com/nielsnuebel/kirby.git
 cd kirby/
 mkdir dist && cd dist && git clone --recursive https://github.com/getkirby/starterkit.git .
-rm -rf .git && cd .. 
+rm -rf .git && cd .. && rm -rf .git
+git init && git remote add origin REPLACE_ME
 npm install
 npm init
 npm dev 
